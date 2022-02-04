@@ -5,7 +5,7 @@ import Cards from "./Cards";
 import hogs from "../porkers_data";
 
 function App() {
-	console.log(hogs)
+	// console.log(hogs)
 	return (
 		<div className="App">
 			<Nav />

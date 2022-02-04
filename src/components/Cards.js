@@ -1,17 +1,23 @@
 import React from 'react';
+import EachCard from './EachCard';
 import hogs from '../porkers_data';
 
 function Cards({hogs}) {
-  
-  return <div style={{border: "solid 1px"}} className = "ui grid container">
-    <p>Cards</p>
-    <img src={hogs.image}/>
-    <h2>Name: {}</h2>
-    <h3>Hog Specs: {}</h3>
-    <ul>
-      <li>More specs</li>
-    </ul>
-  </div>;
+
+  const hogCard = hogs.map((pig) => {
+    return <EachCard card={pig}/>
+      // name = {hogs.name}
+      // specialty = {hogs.specialty}
+      // greased = {hogs.greased}
+      // weight = {hogs.weight}
+      // medal= {hogs['highest medal achieved']}
+      // image = {hogs.image}
+    // />
+
+  })
+
+  return ( <div>{hogCard}</div> )
+
 }
 
 export default Cards;
